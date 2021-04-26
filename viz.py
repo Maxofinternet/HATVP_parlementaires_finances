@@ -1,7 +1,7 @@
  import pandas as pd
  import plotly.graph_objects as go
 
- df = pd.read_excel('/refined_data.xlsx')
+ df = pd.read_excel('/refineddata.xlsx')
  df = df[df['parts'] != 0]
 aggregated = df.groupby('entreprises').agg(
     {   'parts' : sum ,
